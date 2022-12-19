@@ -1,0 +1,29 @@
+1. Create a file ssh in /boot directory
+cd /boot
+touch ssh
+
+Enable SSH through GUI
+2.Home > Preferences > Raspberry Pi conf > Interfaces > SSH enable
+
+Enable SSH on Raspberry Pi in the Terminal
+sudo raspi-config
+use the arrows on your keyboard to select Interfacing Options.
+Select the P2 SSH option
+confirm and quit
+
+3.Check SSH is enabled
+
+sudo systemctl status ssh
+sudo systemctl enable ssh
+sudo systemctl start ssh
+
+Find the IP address using hostname -l
+
+4. Open Putty in any other machine connected to same network
+
+ssh pi@[raspberrypi_ip_address]
+Enter password:
+
+
+
+
